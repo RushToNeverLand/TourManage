@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<body>
+
+		<div id="header">
+			<h1>Start your journey!</h1>
+		</div>
+
+		<div id="nav">
+			<h3>热门景点</h3>
+			<table>
+				<tr>
+				{% for item in seq %}
+					<td>{{ item.value }}</td>
+				{% endfor %}
+				</tr>
+
+				{% for row in navigation %}
+				  <tr>
+					  {% for column in row.column %}
+						<td>{{ column.caption }}</td>
+					  {% endfor %}
+				  </tr>
+				{% endfor %}
+			</table>
+			
+			<br>
+			<h3>热门线路</h3>
+			<table>
+				<tr>
+				{% for item in seq2 %}
+					<td>{{ item.value2 }}</td>
+				{% endfor %}
+				</tr>
+
+				{% for row in navigation2 %}
+				  <tr>
+					  {% for column in row.column2 %}
+						<td>{{ column.caption2 }}</td>
+					  {% endfor %}
+				  </tr>
+				{% endfor %}
+			</table>
+					
+			<br>
+			<h3>金牌导游</h3>
+			<table>
+				<tr>
+				{% for item in seq3 %}
+					<td>{{ item.value3 }}</td>
+				{% endfor %}
+				</tr>
+
+				{% for row in navigation3 %}
+				  <tr>
+					  {% for column in row.column3 %}
+						<td>{{ column.caption3 }}</td>
+					  {% endfor %}
+				  </tr>
+				{% endfor %}
+			</table>
+		</div>
+
+		<div id="section">
+			<form action="/back">
+				<br>
+				感兴趣的城市（搜索相关景点）:
+				<br>
+					<input type="text" name="city" value="">
+				<br>
+				
+				<input type="submit" value="查询" />
+			</form> 
+			<br>
+			<form action="/back2">
+			
+				感兴趣的景点（搜索相关线路）:
+				<br>
+					<input type="text" name="site" value="">
+				<br>
+				
+				<input type="submit" value="查询" />
+			</form> 
+			<br>
+		</div>
+
+		<div id="van">
+			<form action="/sign">
+				用户名:
+				<br>
+					<input type="text" name="id" value="">
+				<br>
+				密码:
+				<br>
+					<input type="password" name="pwd" value="">
+				<br>
+				
+				<input type="submit" value="登陆" />
+				
+				<a href='form' ><button type="button">注册</button></a>
+			</form> 
+			{{var}}
+		</div>
+		
+		<div id="footer">
+			Author:10152130155
+		</div>
+
+	</body>
+
+		<style>
+			#header {
+				background-color:#9966CC;
+				color:white;
+				text-align:center;
+				padding:5px;
+			}
+			#nav {
+				line-height:30px;
+				background-color:#eeeeee;
+				height:800px;
+				width:270px;
+				float:left;
+				padding:5px; 
+			}
+			#section {
+				width:350px;
+				float:left;
+				padding:10px; 
+			}
+			#van {
+				line-height:30px;
+				background-color:#FFFFFF;
+				height:800px;
+				width:270px;
+				float:right;
+				padding:10px; 
+			}
+			#footer {
+				background-color:#9966CC;
+				color:white;
+				clear:both;
+				text-align:center;
+				padding:5px; 
+			}
+		</style>
+		
+		
+	</body>
+
+</html>
